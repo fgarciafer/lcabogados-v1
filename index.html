@@ -1001,7 +1001,13 @@
     .parallax-banner__bg {
       position: absolute;
       inset: -20%;
-      background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80&fit=crop') center/cover no-repeat;
+      background-image: image-set(
+        url('./parallax-library.webp') type('image/webp'),
+        url('./photo-1521587760476-6c12a4b040da.jfif') type('image/jpeg')
+      );
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       will-change: transform;
     }
 
@@ -1644,8 +1650,11 @@ body.modal-open {
         <h1 class="hero__title">
           <span class="sr-only">LC Abogados, despacho de abogados en Albacete</span>
           <picture>
-            <source srcset="logoLC.webp" type="image/webp">
-            <img src="logoLC.png" alt="LC Abogados" width="1147" height="535" fetchpriority="high" decoding="async">
+            <source
+              srcset="logoLC-380.webp 380w, logoLC-520.webp 520w"
+              sizes="(max-width: 640px) 80vw, 520px"
+              type="image/webp">
+            <img src="logoLC.png" alt="LC Abogados" width="520" height="243" fetchpriority="high" decoding="async">
           </picture>
         </h1>
         <p class="hero__subtitle">Asesoramiento jurídico con rigor y experiencia</p>
@@ -1804,9 +1813,12 @@ body.modal-open {
             </div>
             <div class="bio__image-frame">
               <picture>
-                <source srcset="./photo.webp" type="image/webp">
-                <img src="./photo.png" alt="Pedro Pablo López, abogado fundador de LC Abogados en Albacete" width="1054"
-                  height="1492" loading="lazy" decoding="async">
+                <source
+                  srcset="./photo-520.webp 520w"
+                  sizes="(max-width: 1024px) min(480px, calc(100vw - 4rem)), 520px"
+                  type="image/webp">
+                <img src="./photo.png" alt="Pedro Pablo López, abogado fundador de LC Abogados en Albacete" width="520"
+                  height="736" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="bio__image-accent"></div>
