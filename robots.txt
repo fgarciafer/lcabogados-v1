@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lcabogados.es/sitemap.xml
+LLM: https://lcabogados.es/llms.txt
