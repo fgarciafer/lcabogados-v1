@@ -130,7 +130,7 @@
   <!-- Favicons -->
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="preload" as="image" href="h3cp.png">
+  <link rel="preload" as="image" href="h3cp.webp" type="image/webp">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -482,7 +482,13 @@
     .hero__parallax-bg {
       position: absolute;
       inset: -15%;
-      background: url('./h3cp.png') center/cover no-repeat;
+      background-image: image-set(
+        url('./h3cp.webp') type('image/webp'),
+        url('./h3cp.png') type('image/png')
+      );
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       will-change: transform;
     }
 
@@ -1794,8 +1800,11 @@ body.modal-open {
               <small>Fundación</small>
             </div>
             <div class="bio__image-frame">
-              <img src="./photo.png" alt="Pedro Pablo López, abogado fundador de LC Abogados en Albacete" width="1054"
-                height="1492" loading="lazy" decoding="async">
+              <picture>
+                <source srcset="./photo.webp" type="image/webp">
+                <img src="./photo.png" alt="Pedro Pablo López, abogado fundador de LC Abogados en Albacete" width="1054"
+                  height="1492" loading="lazy" decoding="async">
+              </picture>
             </div>
             <div class="bio__image-accent"></div>
           </div>
