@@ -1084,7 +1084,7 @@
       font-size: 1.1rem;
     }
 
-    .feature-item__text h4 {
+    .feature-item__text h3 {
       font-family: var(--font-serif);
       font-size: 1.1rem;
       font-weight: 500;
@@ -1153,7 +1153,7 @@
       font-size: 1.1rem;
     }
 
-    .contact-info-card h4 {
+    .contact-info-card h3 {
       font-family: var(--font-sans);
       font-size: 0.7rem;
       font-weight: 600;
@@ -1600,7 +1600,7 @@ body.modal-open {
   <!-- MOBILE NAV -->
   <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Menú móvil">
     <button class="mobile-nav__close" id="mobileClose" type="button" aria-label="Cerrar menú"><i
-        class="fa-regular fa-xmark"></i></button>
+        class="fa-regular fa-xmark" aria-hidden="true"></i></button>
     <a href="#inicio" data-mobile-link>Inicio</a>
     <a href="#servicios" data-mobile-link>Servicios</a>
     <a href="#biografia" data-mobile-link>Biografía</a>
@@ -1627,7 +1627,7 @@ body.modal-open {
         </a>
         <a href="mailto:info@lcabogados.es" class="navbar__cta">Escríbenos</a>
         <button class="navbar__burger" id="burgerBtn" type="button" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
         </button>
       </div>
     </nav>
@@ -1643,7 +1643,10 @@ body.modal-open {
         <p class="hero__eyebrow">Albacete · Desde 1992</p>
         <h1 class="hero__title">
           <span class="sr-only">LC Abogados, despacho de abogados en Albacete</span>
-          <img src="logoLC.png" alt="LC Abogados" width="1147" height="535" fetchpriority="high" decoding="async">
+          <picture>
+            <source srcset="logoLC.webp" type="image/webp">
+            <img src="logoLC.png" alt="LC Abogados" width="1147" height="535" fetchpriority="high" decoding="async">
+          </picture>
         </h1>
         <p class="hero__subtitle">Asesoramiento jurídico con rigor y experiencia</p>
         <div class="hero__actions">
@@ -1824,7 +1827,7 @@ body.modal-open {
               <div class="accordion-item">
                 <button class="accordion-btn" type="button" data-accordion aria-expanded="false">
                   Biografía completa
-                  <i class="fa-regular fa-plus"></i>
+                  <i class="fa-regular fa-plus" aria-hidden="true"></i>
                 </button>
                 <div class="accordion-body" role="region">
                   <p>Después de finalizar mis estudios de Derecho, decidí pasar un tiempo en Inglaterra. Durante mi
@@ -1889,7 +1892,7 @@ body.modal-open {
             <div class="feature-item delay-1">
               <div class="feature-item__icon"><i class="fa-solid fa-file-contract"></i></div>
               <div class="feature-item__text">
-                <h4>Acuerdo previo de honorarios</h4>
+                <h3>Acuerdo previo de honorarios</h3>
                 <p>Siempre firmamos un acuerdo antes de comenzar, para que conozca exactamente el coste del
                   procedimiento.</p>
               </div>
@@ -1897,14 +1900,14 @@ body.modal-open {
             <div class="feature-item delay-2">
               <div class="feature-item__icon"><i class="fa-solid fa-scale-balanced"></i></div>
               <div class="feature-item__text">
-                <h4>Tarifas adaptadas</h4>
+                <h3>Tarifas adaptadas</h3>
                 <p>Ofrecemos tarifas fijas, igualas y planes de pago personalizados según cada caso y situación.</p>
               </div>
             </div>
             <div class="feature-item delay-3">
               <div class="feature-item__icon"><i class="fa-solid fa-handshake"></i></div>
               <div class="feature-item__text">
-                <h4>Mediación como primera opción</h4>
+                <h3>Mediación como primera opción</h3>
                 <p>Priorizamos siempre la negociación y mediación para resolver los conflictos de forma más rápida y
                   económica.</p>
               </div>
@@ -1926,17 +1929,17 @@ body.modal-open {
         <div class="contact__grid">
           <div class="contact-info-card reveal delay-1">
             <div class="contact-info-card__icon"><i class="fa-solid fa-location-dot"></i></div>
-            <h4>Dirección</h4>
+            <h3>Dirección</h3>
             <p>Marqués de Molins 5, 4º A<br>CP: 02001 Albacete</p>
           </div>
           <div class="contact-info-card reveal delay-2">
             <div class="contact-info-card__icon"><i class="fa-solid fa-phone"></i></div>
-            <h4>Teléfono</h4>
+            <h3>Teléfono</h3>
             <a href="tel:+34650049018">650 049 018</a>
           </div>
           <div class="contact-info-card reveal delay-3">
             <div class="contact-info-card__icon"><i class="fa-solid fa-envelope"></i></div>
-            <h4>Email</h4>
+            <h3>Email</h3>
             <a href="mailto:info@lcabogados.es">info@lcabogados.es</a>
           </div>
         </div>
@@ -1984,15 +1987,15 @@ body.modal-open {
 
   <!-- BACK TO TOP -->
   <button class="back-top" id="backTop" type="button" aria-label="Volver arriba">
-    <i class="fa-solid fa-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
   </button>
 
   <div class="legal-modal" id="legalModal">
     <div class="legal-modal__overlay"></div>
 
     <div class="legal-modal__content">
-      <button class="legal-modal__close" id="closeLegalModal" type="button">
-        <i class="fa-solid fa-xmark"></i>
+      <button class="legal-modal__close" id="closeLegalModal" type="button" aria-label="Cerrar aviso legal">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
 
       <div id="legalModalBody"></div>
